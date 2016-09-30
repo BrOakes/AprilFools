@@ -410,6 +410,11 @@ def send_messages(total):
     for _ in range(total):
         send_one_message()
 
+def button_down(obj):
+    SendInput(Keyboard(obj))
+    
+def button_up(obj):
+    SendInput(Keyboard(obj, KEYEVENTF_KEYUP))
 
 def press_button(obj, shift):
 
@@ -453,7 +458,7 @@ charToKey = {
     'z': KEY_Z,
     ' ': VK_SPACE,
     '.': VK_OEM_PERIOD,
-    ',': VK_OEM_COMMA,    
+    ',': VK_OEM_COMMA,
     }
 
 def output(string):
